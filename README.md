@@ -1,3 +1,14 @@
+# WONT WORK!
+ iOS does not expose its full filesystem over USB. The photo folders are a restricted interface—not access to the private Apple Notes database. Trusting the device doesn’t change that.
+
+For exporting, the practical options are:
+
+Via a Mac: Enable iCloud Notes on the iPhone and Mac, wait for synchronization, then run the exporter on the Mac with Full Disk Access. This repository reads the Mac’s local Notes database, not the connected iPhone.
+Via a device backup: Create a local backup using Finder on macOS or Apple Devices on Windows, then use a backup-aware Notes extractor, such as apple_cloud_notes_parser. This exporter does not directly import iPhone backups. Notes already synced to iCloud may be absent from the backup.
+Direct filesystem access: Generally requires a jailbroken device or specialized privileged extraction—not ordinary USB access.
+If the notes are under “On My iPhone,” move them into an iCloud folder first if you want to use the Mac-sync route.
+
+
 # Notes Cable Transfer
 
 An experimental Android app for transferring Apple Notes directly from an
